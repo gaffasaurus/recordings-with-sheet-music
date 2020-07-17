@@ -47,6 +47,7 @@
       overflow: scroll;
       border: 1px solid gray;
       margin-right: 10px;
+      max-height: 300px;
     }
 
     #composer-dropdown p{
@@ -72,23 +73,14 @@
     <div class="composer">
       <input type="text" class="search-field" id="composer-search" size="30" placeholder="Composer..." onkeyup="showDropdown('composer')"></input>
       <div class="dropdown" id="composer-dropdown">
-        <p>Composer 1</p>
-        <p>Composer 2</p>
-        <p>Composer 3</p>
-        <p>Composer 4</p>
+        <!-- items added dynamically -->
       </div>
     </div>
     <div class="title">
-      <input type="text" class="search-field" id="title-search" size="60" placeholder="Piece name..." onkeyup="showDropdown('title')"></input>
+      <input type="text" class="search-field" id="title-search" size="60" placeholder="Title (composer required)" disabled=true onkeyup="showDropdown('title')"></input>
       <div class="dropdown" id="title-dropdown">
-        <p>Piece 1</p>
-        <p>Piece 2</p>
-        <p>Piece 3</p>
-        <p>Piece 4</p>
+        <!-- items added dynamically -->
       </div>
-      <!-- <input type="text" class="search-field" id="op-num" size="6" placeholder="Opus"></input>
-      <input type="text" class="search-field" id="work-num" size="6" placeholder="#"></input> -->
-      <!-- <label for="work-num" id="optional-label">(optional)</label> -->
     </div>
     <button id="submit" onclick="submitSearch()">Search!</button>
   </div>
